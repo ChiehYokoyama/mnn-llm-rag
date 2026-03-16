@@ -246,7 +246,7 @@ class RAGSystem:
 【回答】
 """
         with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
-            response = self.llm_model.response(prompt, stream=False)
+            response = self.llm_model.response(prompt, stream=False, max_new_tokens=512)
 
         if hasattr(response, 'text'):
             answer = response.text
