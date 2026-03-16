@@ -347,7 +347,7 @@ class DocumentManager:
         return all_chunks
 
     @staticmethod
-    def _clean_text(self, text: str) -> str:
+    def _clean_text(text: str) -> str:
         """清理文本并去重"""
         # 移除多余空格和特殊符号，保留常用的汉字、英文字母、数字和标点符号
         text = re.sub(r'\s+', ' ', text)  # 替换多余空白为空格
